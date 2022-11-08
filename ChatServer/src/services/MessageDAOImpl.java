@@ -16,7 +16,7 @@ public class MessageDAOImpl implements IMessageDAO{
 
     private static final String SELECT_MESSAGE_BY_ID = "select * from message where id =?";
     private static final String SELECT_ALL_MESSAGE = "select * from message";
-    private static final String SELECT_ALL_MESSAGE_BY_ROOM = "select * from message where roomId=? LIMIT 6";
+    private static final String SELECT_ALL_MESSAGE_BY_ROOM = "select * from message where roomId=? ORDER BY message_id DESC LIMIT 6 ";
     public MessageDAOImpl() {
         this.connection = ConnectionDb.getConnection();
     }
